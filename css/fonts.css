@@ -1,0 +1,37 @@
+@font-face {
+    font-family:"MyFont";
+    src: url("myfont.woff2") format("woff2");
+}
+
+h1.blauwgrijs {
+    font-weight: 600;
+    
+}
+
+h3.blauwgrijs {
+    font-weight: 600;
+}
+
+.section {
+    text-align: center;
+}
+
+
+.custom-nav .nav-link {
+    font-size:1.3rem;
+    font-family: "MyFont", sans-serif;
+}
+
+.portfolio-title {
+    font-size: 80px;
+}
+
+.contact-section p {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.contact-section h2 {
+    font-size: 50px;
+    font-weight: 800;
+}
