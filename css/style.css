@@ -1,100 +1,203 @@
+/* ------------------ Header ------------------ */
 .custom-nav {
-    background-color: #005C5B;
+  background-color: #005C5B;
 
 }
 
 .custom-nav .nav-link {
-    color: black;
+  color: white;
 }
 
-.side-block {
-    height: 50px;      
-    background-color: #03A88D; 
-    margin: 15px;
-    border-radius: 2rem;
+/* ------------------ skills en main ------------------ */
+.profile-wrapper {
+  display: flex;
+  gap: 30px;                 
+  align-items: center;        
+  justify-content: center;    
+  margin: 40px auto;         
+  max-width: 1000px;
+  padding: 0 20px;
 }
 
-.center-image img {
-   max-width: 200px;   
-   height: auto;
-   display: block;
-   margin: 0 auto;
-   border-radius: 2rem;
+.profile-photo img {
+  width: 180px;             
+  height: auto;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.profile-info {
+  flex: 1;                 
+  background-color: #f0f0f0;
+  padding: 25px 30px;
+  border-radius: 1rem;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+}
+
+.profile-info h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.profile-info ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.profile-info ul li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.home-project {
+  background-color: #03A88D;
 }
 
 
+/* ------------------containe Over mij + foto ------------------ */
 .about-container {
-    display: flex;
-    flex-wrap: nowrap; 
-    align-items: stretch;
-    width: 100%;
-    height: 600px;
+  display: flex;
+  flex-wrap: nowrap;        
+  gap: 30px;                
+  margin: 60px auto;       
+  max-width: 1200px;       
+  align-items: center;      
+  justify-content: center;  
 }
 
 .text-section {
-    background-color: #f0f0f0;
-    padding: 20px;
-    flex: 1; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  flex: 1;                 
+  max-width: 600px;
+  background-color: #f0f0f0;
+  padding: 30px 25px;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+}
+
+.text-section h2 {
+  margin-bottom: 15px;
+}
+
+.text-section p {
+  line-height: 1.6;
 }
 
 .image-section {
-    background-color:#03A88D;
-    flex:1; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
+  flex: 1;                  
+  display: flex;
+  justify-content: center;  
+  align-items: center;     
 }
 
 .image-section img {
-    object-fit: cover;
-    display: block;
-    border-radius: 2rem;
+  width: 100%;
+  max-width: 300px;         
+  height: auto;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-@media (max-width: 360) {
-    .about-container {
-    overflow-x: auto;
-    }
+/* ------------------ versie Desktop - tablet - mobile ------------------ */
+/* ------------------ Ik gebruik altijd @media (Het is gemakkelijker in gebruik) ------------------ */
+@media (max-width: 1024px) {
+  .profile-wrapper, .about-container {
+    flex-wrap: wrap;        
+  }
 }
 
+
+@media (max-width: 768px) {
+  .profile-wrapper {
+    flex-direction: row;         
+    flex-wrap: wrap;              
+    justify-content: center;     
+    gap: 15px;                   
+    margin: 30px 10px;
+  }
+
+  .profile-photo img {
+    max-width: 120px;            
+  }
+
+  .profile-info {
+    flex: 1 1 150px;            
+    max-width: 200px;             
+    padding: 15px;
+    margin-top: 0;               
+  }
+
+ 
+  .about-container {
+    flex-direction: row;          
+    flex-wrap: wrap;              
+    gap: 15px;
+    margin: 40px 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-section {
+    flex: 1 1 150px;
+    max-width: 200px;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .image-section img {
+    max-width: 120px;
+    height: auto;
+  }
+}
+
+
+@media (max-width: 360px) {
+  h1.display-3 {
+    font-size: 1.8rem;
+  }
+
+  .profile-photo img, .image-section img {
+    max-width: 250px;
+  }
+}
+
+/* ------------------ footer voor alle paginas ------------------ */
 
 footer {
-    background-color: #005C5B;
-    height: 100px;
-    margin: 15px;
+  background-color: #005C5B;
+  height: 100px;
+  margin: 15px;
 }
 
-
+/* ------------------ Portfolio pagina------------------ */
 .portfolio-section {
-    position: relative;
-    justify-content: space-between;
-    display: flex;
-    height: 350px;
-    overflow: hidden;
+  position: relative;
+  justify-content: space-between;
+  display: flex;
+  height: 350px;
+  overflow: hidden;
 }
 
 .portfolio-section img {
-    width: 50%;
-    object-fit: cover;
-    height: 100%;
-    width: auto;
-    padding: 20px;
-    border-radius: 2rem;
+  width: 50%;
+  object-fit: cover;
+  height: 100%;
+  width: auto;
+  padding: 20px;
+  border-radius: 2rem;
 }
 
 .portfolio-title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-weight: bold;
-    color: white;
-    text-shadow: 0 0 10px black;
-    letter-spacing: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 10px black;
+  letter-spacing: 5px;
 }
 
 @media (max-width: 360px) {
@@ -121,53 +224,51 @@ footer {
 
 
 .section-project .themed-grid-col {
-    margin: 10px;
-    padding-top: .75rem;
-    padding-bottom: .75rem;
-    background-color: #03A88D;
-    border: 1px solid black;
-    color: black;
-    height: 100px;
-    text-align: center;
-    padding: 40px 0;
-    margin-bottom: 20px;
-    display: flex;
+  margin: 10px;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  background-color: #03A88D;
+  border: 1px solid black;
+  color: black;
+  height: 100px;
+  text-align: center;
+  padding: 40px 0;
+  margin-bottom: 20px;
+  display: flex;
 
 }
 
 .section-project .themed-grid-col {
-    border-radius: 20px;
-    font-size: 1.3rem;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  border-radius: 20px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
 .row {
-    margin-top: 40px;
-    margin-bottom: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 
 .section-project {
-    padding: 30px;
+  padding: 30px;
 }
 
 
 @media (max-width: 360px) {
-    .themed-grid-col {
-        padding: 30px 0;
-        font-size: 1.1rem;
-    }
+  .themed-grid-col {
+    padding: 30px 0;
+    font-size: 1.1rem;
+  }
 
-    .section-project {
-        padding: 10px;
-    }
+  .section-project {
+    padding: 10px;
+  }
 }
-
-
 
 
 @media (min-width: 992px) {  
@@ -179,48 +280,49 @@ footer {
 }
 
 .project-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    color: black;              
-    text-decoration: none;      
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: black;              
+  text-decoration: none;      
 }
 
 .project-link:hover {
-    color: black;             
-    opacity: 0.8;              
+  color: black;             
+  opacity: 0.8;              
 }
 
 
 .triple-row {
-   width: 100%;
-   display: grid;
-   grid-template-columns: 1fr 2fr 1fr;  
-   align-items: stretch;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;  
+  align-items: stretch;
 }
 
 
 .color-block {
-   width: 100%;
-   height: 300px;
-   background: #03A88D;
+  width: 100%;
+  height: 300px;
+  background: #03A88D;
 }
 
 
+/* ------------------ Contact pagina over image ------------------ */
 .main-image {
-   width: 100%;
-   height: 300px;
-   object-fit: cover;
-   display: block;         
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;         
 }
 
 .contact-section {
-   max-width: 900px;
-   margin: 0 auto;
-   text-align: center;
-   padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 20px;
 
 }
 
@@ -228,12 +330,12 @@ footer {
 
 @media (max-width: 360px) {
 
-    .triple-row {
+  .triple-row {
     grid-template-columns: 60px 1fr 60px;
   }
 
-    .color-block,
-    .main-image {
+  .color-block,
+  .main-image {
     height: 110px;
   }
 }
@@ -241,134 +343,94 @@ footer {
 
 
 .section-pro .themed-grid-col {
-    margin: 10px;
-    padding-top: .75rem;
-    padding-bottom: .75rem;
-    background-color: #05888F;
-    border: 1px solid black;
-    color: black;
-    height: 200px;
-    text-align: center;
-    padding: 40px 0;
-    margin-bottom: 20px;
-    display: flex;
+  margin: 10px;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  background-color: #05888F;
+  border: 1px solid black;
+  color: black;
+  height: 200px;
+  text-align: center;
+  padding: 40px 0;
+  margin-bottom: 20px;
+  display: flex;
+
 
 }
 
 .section-pro .themed-grid-col {
-    border-radius: 20px;
-    font-size: 1.3rem;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  border-radius: 20px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    
 }
 
 
 .row {
-    margin-top: 40px;
-    margin-bottom: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 
 .section-pro {
-    padding: 30px;
+  padding: 30px;
 }
 
 
 @media (max-width: 360px) {
-    .themed-grid-col {
-        padding: 30px 0;
-        font-size: 1.1rem;
-    }
+  .themed-grid-col {
+    padding: 30px 0;
+    font-size: 1.1rem;
+  }
 
-    .section-pro {
-        padding: 10px;
-    }
+  .section-pro {
+    padding: 10px;
+  }
 }
 
 
 
 
+/* ------------------ Home pagina ------------------ */
 .profile-wrapper {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   gap: 40px;
-   padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 0;
 }
 
 
-
-.profile-skills {
-   background: #05888F;
-   padding: 20px 30px;
-   border-radius: 15px;
-   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-   min-width: 1000px;
-   text-align: center;
-
-}
-
-
-
-.profile-skills h2 {
-  margin-bottom: 10px;
-  font-weight: 900;
-}
-
-.profile-skills ul {
-   list-style: none;
-   padding: 0;
-   color: black;
-   font-weight: 700;
-}
-
-.profile-skills li {
-  margin-bottom: 8px;
-  font-size: 1.1rem;
-}
-
-
-@media (max-width: 360px) {
-  .profile-skills {
-    max-width: 340px;   
-    padding: 15px 20px;
-  }
-
-  .profile-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-
+/* ------------------ Contact pagina ------------------ */
 .contact-form {
-   max-width: 700px;
-   margin: 0 auto;
-   padding: 20px 20px 50px;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px 20px 50px;
 }
 
 .message-box {
-   height: 150px;
-   resize: none;
+  height: 150px;
+  resize: none;
 }
 
 .contact-btn {
-   width: 100%;
-   padding: 12px;
-   font-size: 1.2rem;
-   margin-top: 10px;
-   background-color: #03A88D;
-   border: none;
-   border-radius: 8px;
+  width: 100%;
+  padding: 12px;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  background-color: #03A88D;
+  border: none;
+  border-radius: 8px;
 }
 
 .contact-btn:hover {
-   background-color: #02806d;
+  background-color: #02806d;
 }
 
-/* deze stukje werkt met js*/
+/* ------------------ Contact pagina en werkt met js ------------------ */
 .fade-in {
    opacity: 0;              
    transform: translateY(20px); 
@@ -378,4 +440,70 @@ footer {
 .fade-in.appear {
    opacity: 1;                 
    transform: translateY(0);   
+}
+
+
+
+.extra-info {
+  background: #f2f2f2;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+/* ------------------ Home pagina ------------------ */
+.about-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+
+@media (max-width: 480px) {
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-section p {
+    font-size: 14px;  
+    line-height: 1.5;
+    margin: 10px;
+  }
+
+  .image-section img {
+    width: 90%;
+    height: auto;
+  }
+
+  aside.extra-info {
+    max-width: 100%;
+    font-size: 14px;
+  }
+}
+
+
+
+
+/* ------------------ Project pagina over projecten en werkt met js ------------------ */
+
+.projects-page {
+  display: flex;
+  flex-direction: column;  
+  align-items: center;      
+ 
+}
+
+.projects-page .project-box {
+  width: 70%;
+  max-width: 900px;
+  background: white;
+  padding: 70px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(1, 27, 22, 0.15);
+  text-align: center;
+  margin: 50px 0;          
+  animation: fadeIn 0.8s ease-in-out;
 }
