@@ -42,3 +42,64 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+
+
+/* voor portfolio en project paginas zo wanneer u op een project
+klikt, gaat u naar het gewenste project en ziet u de informatie over project.
+Dit gebeurt dankzij JavaScript */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const container = document.getElementById("project-content");
+
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+
+const projects = {
+  1: {
+    title: "Project 1",
+    description: "Een zip bestand met daarin: logo, 3 horizantale sfeerbeelden, en een professionele foto van mijzelf"
+  },
+  2: {
+    title: "Project 2",
+    description: "Wireframes voor desktop en mobile devices 4 paginas"
+  },
+  3: {
+    title: "Project 3",
+    description: "Werken met Project 1 en 2, en eigen website maken met css, html codes"
+  },
+  4: {
+    title: "Project 4",
+    description: "Info over Project 4 bestaat niet"
+  },
+  5: {
+    title: "Project 5",
+    description: "Info over Project 5 bestaat niet"
+  },
+  6: {
+    title: "Project 6",
+    description: "Info over Project 6 bestaat niet"
+  }
+};
+
+
+
+ if (projects[id]) {
+    const p = projects[id];
+    container.innerHTML = `
+      <h1>${p.title}</h1>
+      ${p.image ? `<img src="${p.image}" alt="${p.title}" class="project-img">` : ""}
+      <p>${p.description}</p>
+
+      <a href="portfolio.html">← Terug naar portfolio</a>
+    `;
+    // deze stukje was niet nodig maar ik heb het zelf toegevoegd
+  } else {
+    container.innerHTML = `
+      <h1>Project niet gevonden</h1>
+      <a href="portfolio.html">← Terug naar portfolio</a>
+    `;
+  }
+
+});
