@@ -1,0 +1,186 @@
+/*--------------------- Header en footer kleur voor alle pagina's ------------------*/
+.custom-nav {
+    background-color: #FDCFFA ;
+}
+/* ---------------------- Contact Pagina over image --------------------*/
+.main-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;         
+}
+.contact-section {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 20px;
+
+}
+@media (max-width: 360px) {
+  .triple-row {
+    grid-template-columns: 60px 1fr 60px;
+  }
+  .color-block,
+  .main-image {
+    height: 110px;
+  }
+}
+/* ------------------ Contact pagina ------------------ */
+.contact-form {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px 20px 50px;
+}
+.message-box {
+  height: 150px;
+  resize: none;
+}
+.contact-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #D78FEE;
+  border: none;
+  border-radius: 8px;
+}
+.contact-btn:hover {
+  background-color:#9B5DE0;
+}
+/* ------------------ Contact pagina en werkt met js ------------------ */
+.fade-in {
+  opacity: 0;              
+  transform: translateY(20px); 
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in.appear {
+  opacity: 1;                 
+  transform: translateY(0);   
+}
+.extra-info {
+  background: #f2f2f2;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 300px;
+  margin: 20px auto;
+}
+.social-box {
+  background: #f8f0ff;                 
+  border: 2px solid #e6ccff;            
+  border-radius: 15px;                 
+}
+.social-icon i {
+  color: #c084fc;                       
+  transition: 0.3s ease;
+}
+.social-icon:hover i {
+  color: #a855f7;                     
+  transform: translateY(-3px) scale(1.1);
+}
+.socials .list-inline-item {
+  margin: 0 18px;                 
+}
+/* ---------------Home Pagina ---------------*/
+.about-wrapper {
+  background-color: #ffd6ec; 
+}
+.about-box {
+  background-color: #f8f0ff ;
+  border: 2px solid #D78FEE;  
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.about-photo {
+    max-width: 260px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.about-text {
+  line-height: 1.7;
+  text-align: justify;
+}
+/* ----------------Portfolio Pagina -------------------*/
+.section-project {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+.project-card {
+  flex: 0 0 calc(33% - 20px);
+  background-color: #f8f0ff;
+  border: 2px solid #D78FEE;
+  border-radius: 20px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.5s;
+  opacity: 0;
+  box-sizing: border-box; 
+}
+.project-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  padding: 0 10px; 
+}
+@media (max-width: 768px) {
+  .project-card { flex: 0 0 calc(48% - 20px); height: 120px; font-size: 1.2rem; }
+}
+@media (max-width: 360px) {
+  .project-card { flex: 0 0 calc(48% - 10px); height: 120px; font-size: 1rem; }
+}
+/* ------------------ Project pagina over projecten en werkt met js ------------------ */
+.project-details {
+  background-color:  #f8f0ff;
+  border: 2px solid #D78FEE;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 30px auto;
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+.project-details h1 {
+  margin-bottom: 20px;
+}
+.project-description {
+  margin-bottom: 25px;
+  color: #555;
+  line-height: 1.5;
+}
+.project-image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 15px;
+  margin-top: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/*------------------project pagina ----------------*/
+.info-box {
+  margin: 20px auto;
+  padding: 20px 30px;
+  background-color: #f8f0ff;
+  border: 1px solid #D78FEE;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  height: 150px;
+}
+.projects-page {
+  min-height: 70vh;
+}
